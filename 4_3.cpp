@@ -31,8 +31,7 @@ public:
 	Heap(T* mas, int size, Compare cmp);  // конструктор кучи
 	~Heap();
 	int getsize();
-	void add(T a, T b);
-
+	
 	T ExtractMin(Compare cmp);
 
 private:
@@ -58,13 +57,7 @@ template<class T, class Compare>
 int Heap<T, Compare>::getsize() {
 	return HeapSize;
 }
-template<class T, class Compare>
-void Heap<T, Compare>::add(T a, T b)
-{
-	assert(RealSize < HeapSize);
-	mas[RealSize].set(a, b);
-	RealSize++;
-}
+
 template<class T, class Compare>
 void Heap<T, Compare>::Heapify(int i, Compare cmp)
 {
